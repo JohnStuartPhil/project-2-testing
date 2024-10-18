@@ -9,6 +9,8 @@ const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
 const messages = document.getElementById("messages");
 const choices = ["rock", "paper", "scissors"];
+let pScore = 0;
+let cScore = 0;
 
 /**
  * Add event listener to all the functions
@@ -88,8 +90,38 @@ function updateScores(result) {
     scoreSpan.innerHTML = score;
 }
 
-
-
+//Check for Rock
+function checkEndOfGame() {
+if (playerChoice === "Rock") {
+    if (computerChoice === "Scissors") {
+      alert(`${currentMatch} = You Win`);
+      pScore++;
+    } else {
+      alert(`${currentMatch} = Computer Wins`);
+      cScore++;
+    }
+  }
+  //Check for Paper
+  else if (playerChoice === "Paper") {
+    if (computerChoice === "Rock") {
+      alert(`${currentMatch} = You Win`);
+      pScore++;
+    } else {
+      alert(`${currentMatch} = Computer Wins`);
+      cScore++;
+    }
+  }
+  //Check for Scissors
+  else {
+    if (playerChoice === "Paper") {
+      alert(`${currentMatch} = You Win`);
+      pScore++;
+    } else {
+      alert(`${currentMatch} = Computer Wins`);
+      cScore++;
+    }
+  }
+}
 
 
 // Get the modal
