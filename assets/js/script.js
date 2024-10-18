@@ -42,7 +42,7 @@ function playGame(playerChoice) {
     
     updateScores(result);
 
-    checkEndOfGame(playerScore, computerScore);
+    checkEndOfGame(playerChoice, computerChoice);
 
     updateEndMessage(result);
 
@@ -90,8 +90,9 @@ function updateScores(result) {
     scoreSpan.innerHTML = score;
 }
 
-//Check for Rock
+
 function checkEndOfGame() {
+//Check for Rock
 if (playerChoice === "Rock") {
     if (computerChoice === "Scissors") {
       alert(`${currentMatch} = You Win`);
@@ -113,7 +114,7 @@ if (playerChoice === "Rock") {
   }
   //Check for Scissors
   else {
-    if (playerChoice === "Paper") {
+    if (computerChoice === "Paper") {
       alert(`${currentMatch} = You Win`);
       pScore++;
     } else {
@@ -123,6 +124,25 @@ if (playerChoice === "Rock") {
   }
 }
 
+
+function checkWinner() {
+    if (pScore === 5 || cScore === 5) {
+      const winner =
+        pScore === 5
+          ? "You win the game! Congratulations!"
+          : "Computer wins the game! Try again next time!";
+      alert(winner);
+      return true;
+    }
+    return false;
+  }
+
+  compareInputs(playerChoice, computerChoice);
+updateScore();
+if (checkWinner()) {
+  pScore = cScore = 0;
+  updateScore();
+}
 
 // Get the modal
 var modal = document.getElementById("myModal");
