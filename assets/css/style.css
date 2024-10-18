@@ -1,0 +1,123 @@
+/* Google fonts here */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Kanit:ital,wght@0,300;1,100&display=swap');
+
+/*Main view setup */
+html {
+    min-height: 100;
+    position: relative;
+}
+
+body {
+    font-family: 'kannit', sans-serif; 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header and footer */
+
+header {
+    text-align: center;
+    height: 50px;
+}
+
+
+
+footer {
+    
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    min-height: 80px;
+    padding-top: 5px;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+}
+    
+    
+
+/* Game area */
+
+.game-area {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.control {
+    display: linline-block;
+    margin: 2px;
+    width: 80px;
+    height: 40px;
+}
+
+#messages {
+    height: 20px;
+}
+
+.player {
+    background-color: lightblue;
+    float: left;
+    width: 45%;
+}
+
+#player-image {
+    width: 75%;
+    
+}
+
+.computer {
+    background-color: lightcoral;
+    float: right;
+    width: 45%;
+}
+
+#computer-image {
+    width: 75%;
+    
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: black;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
